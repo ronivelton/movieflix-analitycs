@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - MovieFlix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .badge-genre {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-country {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .rating-stars {
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .rank {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .medal {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 MovieFlix Analytics</h1>
+            <p>Análise de Dados e Estatísticas</p>
+        </header>
+
+        <div class="nav-buttons">
+            <a href="/" class="nav-btn">🎬 Voltar para Filmes</a>
+            <button class="nav-btn" onclick="loadData()">🔄 Atualizar Dados</button>
+        </div>
+
+        <!-- Estatísticas Gerais -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="loading">Carregando estatísticas...</div>
+        </div>
+
+        <!-- Top 10 Filmes -->
+        <div class="card">
+            <h2>🏆 Top 10 Filmes Mais Bem Avaliados</h2>
+            <table id="topMoviesTable">
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>Filme</th>
+                        <th>Gênero</th>
+                        <th>Avaliações</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" class="loading">Carregando dados...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Estatísticas por Gênero -->
+        <div class="card">
+            <h2>🎭 Estatísticas por Gênero</h2>
+            <table id="genreStatsTable">
+                <thead>
+                    <tr>
+                        <th>Gênero</th>
+                        <th>Total de Filmes</th>
+                        <th>Total de Avaliações</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4" class="loading">Carregando dados...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Estatísticas por País -->
+        <div class="card">
+            <h2>🌍 Estatísticas por País</h2>
+            <table id="countryStatsTable">
+                <thead>
+                    <tr>
+                        <th>País</th>
+                        <th>Total de Usuários</th>
+                        <th>Total de Avaliações</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4" class="loading">Carregando dados...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Carregar dados ao abrir a página
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+        });
+
+        // Função para carregar todos os dados
+        async function loadData() {
+            await Promise.all([
+                loadDashboard(),
+                loadTopMovies(),
+                loadGenreStats(),
+                loadCountryStats()
+            ]);
+        }
+
+        // Carregar estatísticas gerais
+        async function loadDashboard() {
+            try {
+                const response = await fetch('/api/analytics/dashboard');
+                const result = await response.json();
+
+                if (result.success) {
+                    const data = result.data;
+                    document.getElementById('statsGrid').innerHTML = `
+                        <div class="stat-card">
+                            <div class="stat-number">${data.totalFilmes}</div>
+                            <div class="stat-label">Filmes Cadastrados</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${data.totalUsuarios}</div>
+                            <div class="stat-label">Usuários Ativos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${data.totalAvaliacoes}</div>
+                            <div class="stat-label">Avaliações Feitas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${data.mediaGeral.toFixed(1)}</div>
+                            <div class="stat-label">Média Geral</div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Erro ao carregar dashboard:', error);
+            }
+        }
+
+        // Carregar top filmes
+        async function loadTopMovies() {
+            try {
+                const response = await fetch('/api/analytics/dashboard');
+                const result = await response.json();
+
+                if (result.success && result.data.topFilmes) {
+                    const tbody = document.querySelector('#topMoviesTable tbody');
+                    
+                    if (result.data.topFilmes.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="5" class="loading">Nenhum filme avaliado ainda</td></tr>';
+                        return;
+                    }
+
+                    tbody.innerHTML = result.data.topFilmes.map((movie, index) => {
+                        const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '';
+                        const stars = '⭐'.repeat(Math.round(movie.media));
+                        
+                        return `
+                            <tr>
+                                <td class="rank">${medal} #${index + 1}</td>
+                                <td><strong>${movie.title}</strong></td>
+                                <td><span class="badge badge-genre">${movie.genre}</span></td>
+                                <td>${movie.total_avaliacoes || movie.total_ratings || 0}</td>
+                                <td>
+                                    <span class="rating-stars">${stars}</span>
+                                    <strong>${movie.media || movie.avg_rating}</strong>
+                                </td>
+                            </tr>
+                        `;
+                    }).join('');
+                }
+            } catch (error) {
+                console.error('Erro ao carregar top filmes:', error);
+            }
+        }
+
+        // Carregar estatísticas por gênero
+        async function loadGenreStats() {
+            try {
+                const response = await fetch('/api/analytics/genero');
+                const result = await response.json();
+
+                if (result.success) {
+                    const tbody = document.querySelector('#genreStatsTable tbody');
+                    
+                    if (result.data.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="4" class="loading">Nenhum dado disponível</td></tr>';
+                        return;
+                    }
+
+                    tbody.innerHTML = result.data.map(genre => {
+                        const stars = '⭐'.repeat(Math.round(genre.media));
+                        return `
+                            <tr>
+                                <td><span class="badge badge-genre">${genre.genero}</span></td>
+                                <td>${genre.total_filmes}</td>
+                                <td>${genre.total_avaliacoes}</td>
+                                <td>
+                                    <span class="rating-stars">${stars}</span>
+                                    <strong>${genre.media}</strong>
+                                </td>
+                            </tr>
+                        `;
+                    }).join('');
+                }
+            } catch (error) {
+                console.error('Erro ao carregar stats de gênero:', error);
+            }
+        }
+
+        // Carregar estatísticas por país
+        async function loadCountryStats() {
+            try {
+                const response = await fetch('/api/analytics/pais');
+                const result = await response.json();
+
+                if (result.success) {
+                    const tbody = document.querySelector('#countryStatsTable tbody');
+                    
+                    if (result.data.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="4" class="loading">Nenhum dado disponível</td></tr>';
+                        return;
+                    }
+
+                    tbody.innerHTML = result.data.map(country => {
+                        const stars = '⭐'.repeat(Math.round(country.media));
+                        return `
+                            <tr>
+                                <td><span class="badge badge-country">${country.pais}</span></td>
+                                <td>${country.total_usuarios}</td>
+                                <td>${country.total_avaliacoes}</td>
+                                <td>
+                                    <span class="rating-stars">${stars}</span>
+                                    <strong>${country.media}</strong>
+                                </td>
+                            </tr>
+                        `;
+                    }).join('');
+                }
+            } catch (error) {
+                console.error('Erro ao carregar stats de país:', error);
+            }
+        }
+    </script>
+</body>
+</html>

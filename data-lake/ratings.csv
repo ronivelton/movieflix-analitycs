@@ -1,0 +1,143 @@
+movie_title,user_name,rating,comment
+O Poderoso Chefão,João Silva,5,Obra-prima absoluta do cinema
+O Poderoso Chefão,Maria Santos,5,Melhor filme que já vi
+O Poderoso Chefão,John Doe,4.5,Clássico impecável
+O Poderoso Chefão,Pierre Dubois,5,Perfeito em todos os aspectos
+O Poderoso Chefão,Hans Mueller,5,Obra de arte cinematográfica
+Matrix,Pedro Costa,5,Revolucionou a ficção científica
+Matrix,Ana Paula,4.5,Efeitos visuais incríveis
+Matrix,Jane Smith,5,Filosófico e emocionante
+Matrix,Takeshi Yamamoto,5,Inovador
+Matrix,Carlos Lopez,5,Neo é o melhor
+Matrix,Lucas Oliveira,4.5,Trilogia fantástica
+Pulp Fiction,Carlos Ferreira,4.5,Narrativa genial
+Pulp Fiction,Michael Brown,5,Tarantino no seu melhor
+Pulp Fiction,Emma Johnson,4.5,Diálogos incríveis
+Pulp Fiction,Marco Rossi,5,Cinema puro
+Inception,Sarah Johnson,5,Complexo e fascinante
+Inception,David Wilson,4.5,Christopher Nolan é um gênio
+Inception,Carlos Lopez,5,Filme para assistir várias vezes
+Inception,Maria Garcia,4.5,Sonho dentro de sonho
+Inception,Juliana Lima,5,Simplesmente perfeito
+Inception,Liam Williams,5,Obra-prima
+Parasite,Maria Garcia,5,Crítica social brilhante
+Parasite,Luis Rodriguez,5,Melhor filme de 2019
+Parasite,Diego Fernandez,5,Oscar merecido
+Parasite,Yuki Tanaka,5,Impactante
+Parasite,Beatriz Martins,5,Genial
+O Senhor dos Anéis,Sofia Martinez,5,Épico e emocionante
+O Senhor dos Anéis,Diego Fernandez,5,Trilogia perfeita
+O Senhor dos Anéis,Thiago Pereira,5,Fantasia incrível
+O Senhor dos Anéis,Olivia Brown,5,Obra-prima épica
+O Senhor dos Anéis,Jacques Martin,4.5,Magistral
+Forrest Gump,João Silva,4.5,Emocionante do início ao fim
+Forrest Gump,Maria Santos,5,Tom Hanks impecável
+Forrest Gump,Diego Fernandez,5,Sempre choro no final
+Forrest Gump,Camila Ribeiro,5,Lindo demais
+Forrest Gump,Jennifer Garcia,4.5,Tocante
+Interestelar,Pedro Costa,5,Ciência e emoção combinadas
+Interestelar,Ana Paula,4.5,Visualmente deslumbrante
+Interestelar,Rafael Gomes,5,Obra-prima de Nolan
+Interestelar,Noah Jones,5,Incrível
+Interestelar,Alessandro Ferrari,4.5,Espetacular
+Vingadores Ultimato,Carlos Ferreira,4,Conclusão épica
+Vingadores Ultimato,John Doe,4.5,Satisfatório para os fãs
+Vingadores Ultimato,Gabriel Rodrigues,5,Emocionante
+Vingadores Ultimato,William Martinez,4.5,Épico
+Vingadores Ultimato,Valentina Lopez,4,Bom final
+Coringa,Jane Smith,5,Joaquin Phoenix brilhante
+Coringa,Michael Brown,4.5,Perturbador e profundo
+Coringa,Patricia Dias,5,Performance magistral
+Coringa,Linda Anderson,5,Intenso
+Coringa,Sophie Bernard,4.5,Poderoso
+Harry Potter e a Pedra Filosofal,Fernanda Alves,5,Mágico
+Harry Potter e a Pedra Filosofal,Sarah Johnson,5,Infância perfeita
+Harry Potter e a Pedra Filosofal,Ava Miller,5,Nostalgia pura
+Harry Potter e a Pedra Filosofal,Anna Fischer,4.5,Adorável
+Gladiador,Ricardo Souza,5,Épico
+Gladiador,Robert Miller,5,Russell Crowe incrível
+Gladiador,Klaus Weber,4.5,Grandioso
+Gladiador,Santiago Morales,5,Espetacular
+Toy Story,Beatriz Martins,5,Clássico da animação
+Toy Story,Emily Davis,5,Infância marcada
+Toy Story,Carmen Gonzalez,5,Emocionante
+Toy Story,Francesca Ricci,5,Perfeito
+Jurassic Park,Lucas Oliveira,5,Dinossauros incríveis
+Jurassic Park,James Taylor,5,Revolucionário
+Jurassic Park,Hiroshi Suzuki,4.5,Efeitos impressionantes
+Jurassic Park,Mateo Silva,5,Clássico atemporal
+Titanic,Maria Santos,5,Romance épico
+Titanic,Mary Thomas,5,Choro sempre
+Titanic,Marie Laurent,5,Lindo
+Titanic,Giulia Romano,4.5,Emocionante
+De Volta para o Futuro,João Silva,5,Diversão garantida
+De Volta para o Futuro,David Wilson,5,Clássico dos 80
+De Volta para o Futuro,Isabella Rojas,4.5,Genial
+De Volta para o Futuro,Greta Schmidt,5,Adorável
+Star Wars,Pedro Costa,5,Saga lendária
+Star Wars,John Doe,5,Mudou o cinema
+Star Wars,Hans Mueller,5,Épico espacial
+Star Wars,Takeshi Yamamoto,4.5,Icônico
+Os Vingadores,Gabriel Rodrigues,4.5,Início épico do MCU
+Os Vingadores,William Martinez,4.5,Heróis reunidos
+Os Vingadores,Jose Hernandez,4,Divertido
+Os Vingadores,Liam Williams,4.5,Ótimo começo
+Homem-Aranha,Lucas Oliveira,4.5,Tobey é o melhor
+Homem-Aranha,Emily Davis,4.5,Nostalgia
+Homem-Aranha,Ana Martinez,4,Legal
+Batman O Cavaleiro das Trevas,Carlos Ferreira,5,Heath Ledger brilhante
+Batman O Cavaleiro das Trevas,Michael Brown,5,Melhor filme de super-herói
+Batman O Cavaleiro das Trevas,Pierre Dubois,5,Obra-prima
+Batman O Cavaleiro das Trevas,Marco Rossi,5,Perfeito
+Shrek,Fernanda Alves,4.5,Hilário
+Shrek,Sarah Johnson,5,Humor incrível
+Shrek,Carmen Gonzalez,4.5,Divertido
+Pantera Negra,Thiago Pereira,4.5,Representatividade importante
+Pantera Negra,Jennifer Garcia,5,Wakanda Forever
+Pantera Negra,Valentina Lopez,4.5,Poderoso
+Frozen,Beatriz Martins,4.5,Let it go é icônica
+Frozen,Ava Miller,5,Crianças amam
+Frozen,Sophie Bernard,4,Fofo
+Procurando Nemo,Camila Ribeiro,5,Lindo demais
+Procurando Nemo,Mary Thomas,5,Emociona sempre
+Procurando Nemo,Anna Fischer,5,Adorável
+ET O Extraterrestre,João Silva,5,Clássico inesquecível
+ET O Extraterrestre,James Taylor,5,Spielberg genial
+ET O Extraterrestre,Hiroshi Suzuki,4.5,Tocante
+O Rei Leão,Maria Santos,5,Hakuna Matata
+O Rei Leão,Emily Davis,5,Infância inteira
+O Rei Leão,Francesca Ricci,5,Obra-prima Disney
+Deadpool,Gabriel Rodrigues,4.5,Humor ácido
+Deadpool,Robert Miller,4.5,Diferente
+Deadpool,Klaus Weber,4,Engraçado
+Logan,Ricardo Souza,5,Emocionante
+Logan,David Wilson,5,Melhor filme do Wolverine
+Logan,Alessandro Ferrari,4.5,Intenso
+Homem de Ferro,Lucas Oliveira,5,RDJ perfeito como Tony
+Homem de Ferro,William Martinez,4.5,Início do MCU
+Homem de Ferro,Mateo Silva,4.5,Ótimo
+Capitão América,Ana Paula,4,Bom início
+Capitão América,Linda Anderson,4.5,Steve Rogers perfeito
+Thor,Pedro Costa,4,Legal
+Thor,Emma Johnson,4,Divertido
+Doutor Estranho,Carlos Lopez,4.5,Efeitos visuais incríveis
+Doutor Estranho,Noah Jones,4.5,Trippy
+Guardiões da Galáxia,Juliana Lima,5,Trilha sonora incrível
+Guardiões da Galáxia,Michael Brown,5,Divertido demais
+Guardiões da Galáxia,Olivia Brown,4.5,Ótimo
+Homem-Formiga,Rafael Gomes,4,Engraçado
+Homem-Formiga,Jane Smith,4.5,Surpreendente
+Velozes e Furiosos,Gabriel Rodrigues,4,Ação pura
+Velozes e Furiosos,Jose Hernandez,4.5,Adrenalina
+John Wick,Ricardo Souza,5,Keanu em ação
+John Wick,Robert Miller,5,Coreografia perfeita
+John Wick,Hans Mueller,4.5,Intenso
+Mad Max Estrada da Fúria,Carlos Ferreira,5,Ação do início ao fim
+Mad Max Estrada da Fúria,Pierre Dubois,5,Espetacular
+Mad Max Estrada da Fúria,Marco Rossi,4.5,Frenético
+Duna,Pedro Costa,4.5,Épico visual
+Duna,Takeshi Yamamoto,4.5,Grandioso
+Duna,Yuki Tanaka,4,Interessante
+Top Gun Maverick,John Doe,5,Cruise ainda voa
+Top Gun Maverick,David Wilson,4.5,Nostálgico
+Top Gun Maverick,James Taylor,5,Emocionante

@@ -1,0 +1,40 @@
+# Node modules (serão instalados dentro do container)
+node_modules/
+npm-debug.log
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentation
+README.md
+*.md
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Test files
+test/
+*.test.js
+
+# Build files
+dist/
+build/
